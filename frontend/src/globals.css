@@ -1,0 +1,280 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100vh);
+    }
+  }
+
+  .animate-float {
+    animation: float 8s linear infinite;
+  }
+}
+
+@layer base {
+  :root {
+    --background: rgb(255, 255, 255);
+    --foreground: hsl(240 10% 3.9%);
+
+    --card: hsla(0, 0%, 100%, 0.3);
+    --card-foreground: hsl(0, 0%, 3%);
+
+    --popover: hsl(0 0% 100%);
+    --popover-foreground: hsl(240 10% 3.9%);
+
+    --primary: #049efe;
+    --primary-foreground: #fff;
+
+    --secondary: #fff;
+    --secondary-foreground: #000000;
+
+    --muted: hsl(240 4.8% 95.9%);
+    --muted-foreground: hsl(240 3.8% 46.1%);
+
+    --accent: hsl(240 4.8% 95.9%);
+    --accent-foreground: hsl(240 5.9% 10%);
+
+    --destructive: hsl(0 84.2% 60.2%);
+    --destructive-foreground: hsl(0 0% 98%);
+
+    --telegram: hsl(199, 92%, 56%);
+    --telegram-foreground: hsl(0, 0%, 100%);
+
+    --instagram: linear-gradient(
+      45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%
+    );
+    --instagram-foreground: hsl(0, 0%, 100%);
+
+    --border: hsl(240 5.9% 90%);
+    --input: hsl(0, 0%, 8%);
+    --ring: hsl(240 10% 3.9%);
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: hsl(240, 7%, 88%);
+    --foreground: hsl(0 0% 98%);
+
+    --card: hsl(270, 12%, 10%);
+    --card-foreground: hsl(0 0% 98%);
+
+    --popover: hsl(240 10% 3.9%);
+    --popover-foreground: hsl(0 0% 98%);
+
+    --primary: hsl(140 100% 70%);
+    --primary-foreground: hsl(240 5.9% 10%);
+
+    --secondary: hsl(298.05deg 100% 79.68%);
+    --secondary-foreground: hsl(240 5.9% 10%);
+
+    --muted: hsl(240 3.7% 15.9%);
+    --muted-foreground: hsl(240 5% 64.9%);
+
+    --accent: hsl(240 3.7% 15.9%);
+    --accent-foreground: hsl(0 0% 98%);
+
+    --destructive: hsl(14, 100%, 57%);
+    --destructive-foreground: hsl(0 0% 98%);
+
+    --border: hsl(240 3.7% 15.9%);
+    --input: hsl(0, 0%, 100%);
+    --ring: hsl(240 4.9% 83.9%);
+
+    --radius: 0.5rem;
+  }
+
+  /* .twa {
+    --background: var(--tg-theme-bg-color);
+    --foreground: var(--tg-theme-text-color);
+ 
+    --card: var(--tg-theme-section-bg-color);
+    --card-foreground: var(--tg-theme-text-color);
+
+    --popover: var(--tg-theme-section-bg-color);
+    --popover-foreground: var(--tg-theme-text-color);
+  
+    --primary: var(--tg-theme-button-color);
+    --primary-foreground: var(--tg-theme-button-text-color);
+ 
+    --secondary: var(--tg-theme-secondary-bg-color);
+    --secondary-foreground: var(--tg-theme-text-color);
+ 
+    --muted: var(--tg-theme-hint-color);
+    --muted-foreground: var(--tg-theme-hint-color);
+ 
+    --accent: var(--tg-theme-accent-text-color);
+    --accent-foreground: hsl(0 0% 98%);
+ 
+    --destructive: var(--tg-theme-destructive-text-color);
+    --destructive-foreground: hsl(0 0% 98%);
+  } */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  input[type="time"],
+  input[type="date"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  ::selection {
+    background: hsl(140, 100%, 85%);
+    color: hsl(0, 0%, 0%);
+  }
+}
+
+/* Add this to your global CSS or Tailwind configuration */
+/* Add this to your global CSS or Tailwind configuration */
+
+@keyframes tooltipAppear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tooltipDisappear {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.animate-tooltip-appear {
+  animation: tooltipAppear 1s ease-out;
+}
+
+.animate-tooltip-disappear {
+  animation: tooltipDisappear 0.3s ease-out;
+}
+
+.bg-none {
+  background: #a9d2ff;
+}
+
+.water-fill clipPath path {
+  fill: black;
+}
+.water-fill rect,
+.water-fill .water-container {
+  transition: transform 500ms;
+}
+
+.water-fill .water {
+  animation: ripple 1.4s infinite linear;
+  fill: var(--primary);
+}
+
+@keyframes ripple {
+  100% {
+    transform: translate3d(-105%, 0, 0);
+  }
+}
+
+.navbar {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(2px);
+}
+
+.stage {
+  overflow: hidden;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bubble-box {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  transform: scale(1);
+  cursor: pointer;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.bubble {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  transform: scale(1);
+  cursor: pointer;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.bubble-box.popped .bubble {
+  animation: popped 0.3s ease-out both;
+  animation-duration: 0.3s !important;
+}
+
+.bubble-box .bubble-tooltip {
+  transition: 0.3s ease;
+  opacity: 0;
+  transform: scale(0);
+}
+
+.bubble-box.popped .bubble-tooltip {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@keyframes popped {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+
+@keyframes messageDisplay {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(3);
+  }
+}

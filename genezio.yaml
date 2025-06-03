@@ -1,0 +1,26 @@
+name: goodfeel
+region: us-east-1
+yamlVersion: 2
+services:
+    databases:
+        - name: my-mongo-db
+          type: mongo-atlas
+nestjs:
+    path: backend
+    packageManager: npm
+    scripts:
+        deploy:
+            - npm install
+frontend:
+    path: frontend
+    publish: dist
+    scripts:
+        deploy:
+            - npm install
+        build:
+            - npm run build
+        start:
+            - npm install
+            - npm run dev
+    environment:
+        VITE_API_URL_NESTJS: ${{ nestjs.url }}

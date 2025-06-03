@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0" /> 
+    <title>7EN Drinks</title>
+    <meta name="description" content="Habbit Hero" />
+
+    <style>
+      html {
+        height: 100%;
+        overflow: hidden;
+      }
+
+      body {
+        height: 100%;
+        overflow-y: auto;
+      }
+
+      .bg {
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #a9d2ff url("/assets/bg.svg") no-repeat center top;
+        background-size: auto 100%;
+        min-height: 1000px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-LD351P1WNS"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-LD351P1WNS");
+    </script>
+    <script src="https://sdk.panl.so/panl.js" data-app-id="P-4MRJC2KQ"></script>
+  </body>
+</html>
