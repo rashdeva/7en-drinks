@@ -1,36 +1,34 @@
-name: goodfeel
-region: us-east-1
-yamlVersion: 2
-services:
-  databases:
-    - name: my-mongo-db
-      type: mongo-atlas
-
-nestjs:
-  path: backend
-  packageManager: npm
-  scripts:
-    deploy:
-      - npm install
-    build:
-      - pnpm run build
-    start:
-      - pnpm install
-      - pnpm run start:prod
-  environment:
-    MONGODB_URL: ${{ my-mongo-db.url }}
-
 frontend:
-  path: frontend
-  publish: dist
-  scripts:
-    deploy:
-      - pnpm install
-    build:
-      - pnpm run build
-    start:
-      - pnpm install
-      - pnpm run dev
-  environment:
-    VITE_API_URL: ${{ nestjs.url }}
-  subdomain: amaranth-available-blackbird
+    environment:
+        VITE_API_URL: ${{ nestjs.url }}
+    path: frontend
+    publish: dist
+    scripts:
+        build:
+            - pnpm run build
+        deploy:
+            - pnpm install
+        start:
+            - pnpm install
+            - pnpm run dev
+    subdomain: amaranth-available-blackbird
+name: se7en-drinks
+nestjs:
+    environment:
+        MONGODB_URL: ${{ my-mongo-db.url }}
+    packageManager: npm
+    path: backend
+    scripts:
+        build:
+            - pnpm run build
+        deploy:
+            - npm install
+        start:
+            - pnpm install
+            - pnpm run start:prod
+region: us-east-1
+services:
+    databases:
+        - name: my-mongo-db
+          type: mongo-atlas
+yamlVersion: 2
