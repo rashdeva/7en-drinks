@@ -8,11 +8,10 @@ import { AuthModule } from './auth/auth.module';
 import { NotificationModule } from './notifications/notification.module';
 import { QuestModule } from './quests/quest.module';
 import { I18nModule } from 'nestjs-i18n';
-import { ConfigService } from '@nestjs/config';
 import { join } from 'path';
 import { ComboModule } from './combo/combo.module';
 import { LeaderboardModule } from './leaderboard/leaderboard.module';
-import { BubbleGameTokenGuard } from './auth/guards/bubble.guard';
+import { LocalesModule } from './locales/locales.module';
 
 @Module({
   imports: [
@@ -22,11 +21,12 @@ import { BubbleGameTokenGuard } from './auth/guards/bubble.guard';
     AuthModule,
     NotificationModule,
     QuestModule,
+    LocalesModule,
     I18nModule.forRoot({
       fallbackLanguage: 'en',
       loaderOptions: {
-        path: join(__dirname, '../../shared/locales'),
-        watch: true, // Enable hot-reload for translation files
+        path: join(__dirname, '/locales/'), // Points to dist/locales in production
+        watch: false, // Disable watch in production environment
       },
     }),
     ComboModule,
@@ -36,4 +36,3 @@ import { BubbleGameTokenGuard } from './auth/guards/bubble.guard';
   providers: [AppService],
 })
 export class AppModule {}
-

@@ -4,9 +4,5 @@
   "version": "0.1.0",
   "scripts": {
     "prepare": "cd frontend && husky"
-  },
-  "workspaces": [
-    "frontend",
-    "backend"
-  ]
+  }
 }

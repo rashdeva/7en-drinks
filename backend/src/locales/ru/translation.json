@@ -1,0 +1,104 @@
+{
+  "onboarding_title": "Добро пожаловать в Habbit Hero!",
+  "onboarding_content": "Заботитесь о своём здоровье и хотите следить за тем, сколько воды вы пьёте ежедневно? Мы поможем вам поддерживать оптимальный уровень гидратации!",
+  "onboarding_action": "Поехали!",
+
+  "profile": "Профиль",
+  "earn_more": "Получить больше",
+  "main": "Главная",
+
+  "welcome_title": "Добро пожаловать в Habbit Hero!",
+  "earn_more_title": "Лопай пузыри, чтобы получить очки H2O",
+
+  "invite_friend_text": "{{name}} приглашает тебя в Habbit Hero! Получи +1000 H20 за то, что присоединишься по ссылке:",
+  "notify_friend_text": "{{name}} напоминает про необходимость выпить стакан воды. Отметиться можно здесь:",
+  "quest_completed": "Задание выполнено!",
+
+  "points": "выпито",
+  "points_title": "Выпито воды",
+  "hello": "Привет",
+  "today_drank": "Сегодня ты выпил {{value}} {{cups}} воды",
+  "total_drank": "Всего ты выпил {{value}} {{cups}} воды.",
+  "airdrop_soon": "Waterdrop уже скоро",
+  "airdrop_read": "Прочитай больше про Waterdrop",
+  "referral_link": "Реферальная ссылка",
+  "referral_link_copied": "Реферальная ссылка скопирована",
+  "invited_already": "Вы пригласили {{value}} {{friends}}",
+  "invite_info": "За каждого приглашенного друга вы получаете {{value}} очков H2O",
+  "friend": "друг",
+  "friend_few": "друга",
+  "friend_many": "друзей",
+
+  "my_tasks": "Мои задания",
+  "7EN_drinks": "7EN DRINKS",
+  "tasks": "Задания",
+  "drink": "Выпить",
+  "drink_water": "Пей воду!",
+  "drink_water_times": "{{value}} {{cups}} в день",
+  "drink_water_success": "Поздравляем, вы выпили 4 {{cups}}.",
+  "cup": "Стакан",
+  "cup_few": "Стакана",
+  "cup_many": "Стаканов",
+  "subscribe_task": "Подписаться",
+  "check_task": "Проверить подписку",
+  "open_task": "Открыть задание",
+  "complete_task": "Проверить задание",
+  "open_friend_task": "Пригласить друга",
+  "complete_friend_task": "Проверить",
+
+  "drink_daily_limit": "Вы достигли дневного лимита",
+  "drink_hour_limit": "Вы можете выпить ещё через 2 часа.",
+
+  "faq": "Часто задаваемые вопросы",
+
+  "faq_1_title": "Что такое очки H2O",
+  "faq_1_content": "Очки H2O — это игровая валюта, которую вы зарабатываете за регулярное потребление воды и другие задания. Чем больше пьёте, тем больше очков накапливаете, и тем ближе к бонусам!",
+
+  "faq_2_title": "Что такое Waterdrop",
+  "faq_2_content": "Waterdrop — это ваш шанс получить особые бонусы за участие в игре. Следите за обновлениями, чтобы не упустить возможность получить бонусы и награды!",
+
+  "quests": {
+    "title": "Квесты",
+    "description": "Выполняйте задания и увеличивайте количество очков. Используйте очки для участия в мероприятиях и тренировках.",
+    "action_subscribe": "Подписаться",
+    "action_subscribe_check": "Проверить подписку",
+    "action_open_link": "Открыть ссылку",
+    "action_invite_friend": "Пригласить друга",
+    "action_invite_friend_check": "Проверить задание",
+    "action_notify_friend": "Уведомить друга",
+    "check": "Проверить"
+  },
+
+  "quest_error_not_enough_friends": "У вас недостаточно друзей",
+  "quest_error_not_join_channel": "Вы не подписаны на канал",
+  "quest_error_failed": "Вы не выполнили задачу",
+  "quest_error_not_found": "Задача не найдена",
+  "quest_error_time_not_elapsed": "Необходимо подождать как минимум 1 минуту, прежде чем завершить это задание снова",
+
+  "start_drink_water": "Выпить воды!",
+  "start_button_text": "Открыть",
+  "referral_button_text": "Как заработать с рефералами",
+  "subscribe_channel": "Подписаться на канал",
+  "welcome_message": "*Habbit Hero избавит вас от жажды!*\nБот напоминает вовремя выпить воды, следит за вашим прогрессом и заряжает вас энергией!",
+  "referral_message": "О реферальной системе Habbit Hero:\n\n1. Зарегистрируйтесь через goodfeel_devbot и получите 500 токенов.\n2. Поделитесь своей уникальной ссылкой.",
+  "share_referral_link": "Поделиться своей ссылкой",
+  "notification_24h": "Не забывай про воду и H2O-поинты. Загляни и прокачай свой водный баланс!",
+  "notification_48h": "Пьёте воду? Зайдите в Habbit Hero и получайте за это очки!",
+  "notification_7d": "Почувствовал жажду? Твой организм точно скучает по воде. Вернись в Habbit Hero и пополни запас H2O!",
+
+  "games": "Игры",
+  "combo": "Комбо",
+  "bubble": "Пузырьки",
+  "confirm": "Подтвердить",
+
+  "comboSuccessDescription": "Повышайте свой рейтинг на {{tokens}} H2O!",
+  "comboFailTitle": "Ой( не в этот раз",
+  "comboFailDescription": "Вы сможете попробовать снова завтра!",
+  "activateBonus": "Активировать бонус",
+  "comboAlreadyPassed": "Приходите завтра",
+  "combo_completed": "Победа!",
+
+  "leaderboard": "Топ",
+  "top25": "Топ 25",
+  "me": "Я"
+}

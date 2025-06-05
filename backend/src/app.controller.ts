@@ -46,7 +46,7 @@ export class AppController {
   }
 
   @Get('events')
-  async getEvents(@CurrentUser() user: User) {
+  async getEvents() {
     return [];
   }
 
@@ -147,12 +147,12 @@ export class AppController {
     user.balance += amount;
     await user.save();
 
-    const token = this.authService.createBubbleGameToken(user._id.toString())
+    const token = this.authService.createBubbleGameToken(user._id.toString());
 
     return {
       status: 'ok',
       balance: user.balance,
-      token
+      token,
     };
   }
 }
