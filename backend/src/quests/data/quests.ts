@@ -41,7 +41,7 @@ export type Quest = {
     name: 'invite_friend',
     type: 'inviteFriend',
     value: 1,
-    tokens: 1500,
+    tokens: 7,
     completed: false,
     disabled: false,
     hidden: false,

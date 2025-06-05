@@ -19,8 +19,8 @@
 
 @layer base {
   :root {
-    --background: rgb(255, 255, 255);
-    --foreground: hsl(240 10% 3.9%);
+    --background: rgb(0, 0, 0);
+    --foreground: hsl(0, 0%, 100%);
 
     --card: hsla(0, 0%, 100%, 0.3);
     --card-foreground: hsl(0, 0%, 3%);
@@ -28,7 +28,7 @@
     --popover: hsl(0 0% 100%);
     --popover-foreground: hsl(240 10% 3.9%);
 
-    --primary: #049efe;
+    --primary: rgb(37 99 235);
     --primary-foreground: #fff;
 
     --secondary: #fff;

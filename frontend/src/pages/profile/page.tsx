@@ -76,7 +76,7 @@ export const ProfilePage = () => {
             ),
           })}
           {referrals.length === 0 ? "(" : ""} <br />
-          <span>{t("invite_info", { value: 1500 })}</span>
+          <span>{t("invite_info", { value: 7 })}</span>
         </p>
       </section>
       <section className="space-y-1">

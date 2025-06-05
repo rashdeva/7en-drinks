@@ -97,10 +97,7 @@ export class QuestController {
 
   @Roles('admin')
   @Post('add')
-  async addQuest(
-    @Body() createQuestDto: CreateQuestDto,
-    @CurrentUser() user: User,
-  ) {
+  async addQuest(@Body() createQuestDto: CreateQuestDto) {
     return await this.questService.addQuest({
       ...createQuestDto,
       order: 1,

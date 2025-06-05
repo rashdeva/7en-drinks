@@ -25,15 +25,15 @@ export const InviteFriend = () => {
       title: t("referral_link_copied"),
       duration: 2000,
     });
-  }, [referralLink]);
+  }, [referralLink, t]);
 
   return (
-    <div className="bg-card rounded-md overflow-hidden flex items-center gap-3 transition-all active:scale-95">
+    <div className="bg-white/10 rounded-md overflow-hidden flex w-full items-center gap-3 transition-all active:scale-95">
       <Link to={referralShare} target="_blank" className="flex-1 truncate p-3 ">
         {referralLink.replace("https://", "")}
       </Link>
       <Button variant="ghost" onClick={handleCopy} className="px-3">
-        <Copy />
+        <Copy className="text-white" />
       </Button>
     </div>
   );

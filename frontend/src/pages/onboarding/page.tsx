@@ -37,14 +37,15 @@ const OnboardingPage = () => {
     navigate("/");
 
     updateUserMutation.mutate();
-  }, [updateUserMutation]);
+  }, [updateUserMutation, navigate, patchUser]);
 
   return (
     <animated.div
       style={props}
-      className="flex-1 flex flex-col items-center justify-between text-center py-4"
+      className="flex-1 flex flex-col items-center justify-center space-y-10 text-center py-4"
     >
       <main className="space-y-6">
+        <img src="/assets/cup-7en.avif" className="max-w-[80%] mx-auto" alt="" />
         <h1 className="text-4xl">{t("onboarding_title")}</h1>
         <p>{t("onboarding_content")}</p>
       </main>

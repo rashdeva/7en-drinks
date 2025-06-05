@@ -16,7 +16,6 @@ languageDetector.addDetector(customDetector);
 
 i18n
   .use(HttpBackend)
-  .use(languageDetector)
   .use(initReactI18next)
   .init({
     fallbackLng: "en",
@@ -28,19 +27,6 @@ i18n
 
     ns: ["translation"],
     defaultNS: "translation",
-
-    detection: {
-      order: [
-        "cookie",
-        "localStorage",
-        "customDetector",
-        "navigator",
-        "htmlTag",
-        "path",
-        "subdomain",
-      ],
-      caches: ["localStorage", "cookie"],
-    },
 
     interpolation: {
       escapeValue: false,

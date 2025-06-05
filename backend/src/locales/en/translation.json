@@ -1,29 +1,29 @@
 {
-  "onboarding_title": "Welcome to the Habbit Hero!",
-  "onboarding_content": "Care about your health and want to track how much water you drink daily? We’re here to help you stay hydrated and maintain optimal hydration levels!",
+  "onboarding_title": "Welcome to the 7EN Drinks!",
+  "onboarding_content": "Want to take charge of your health and crush your hydration goals? We’re here to help you stay on top of your daily water intake, so you can feel your best every day. Let’s get hydrated together!",
   "onboarding_action": "Let's go!",
   "profile": "Profile",
   "earn_more": "Earn More",
   "main": "Main",
 
-  "welcome_title": "Welcome to the Habbit Hero!",
-  "earn_more_title": "Tap the bubbles to get more H2O points",
+  "welcome_title": "Welcome to the 7EN Drinks!",
+  "earn_more_title": "Tap the bubbles to get more Drinks points",
 
-  "invite_friend_text": "{{name}} invites you to Habbit Hero! Get +1000 H20 for joining by link:",
+  "invite_friend_text": "{{name}} invites you to 7EN Drinks! Get +7 Drinks for joining by link:",
   "notify_friend_text": "{{name}} reminds you to drink a glass of water. You can check in here:",
   "quest_completed": "Task is completed!",
 
   "points": "Drinks",
   "points_title": "Drinks",
   "hello": "Hello",
-  "today_drank": "Today you drank {{value}}/4 {{cups}} of water",
+  "today_drank": "Congratulation! You are full of energy now!",
   "total_drank": "You drank {{value}} {{cups}} in total!",
   "airdrop_soon": "Waterdrop is coming soon!",
   "airdrop_read": "Read more about Waterdrop",
   "referral_link": "Referal link",
   "referral_link_copied": "Referral link copied",
   "invited_already": "You invited {{value}} {{friends}}",
-  "invite_info": "For every friend you invite you get {{value}} H2O Points",
+  "invite_info": "For every friend you invite you get {{value}} Drinks Points",
   "friend": "friend",
   "friend_few": "friends",
   "friend_many": "friends",
@@ -50,15 +50,15 @@
 
   "faq": "FAQ",
 
-  "faq_1_title": "What is H2O points?",
-  "faq_1_content": "H2O points are the in-game currency you earn for regular water consumption and other tasks. The more you drink, the more points you accumulate, and the closer you get to bonuses!",
+  "faq_1_title": "What is Drinks points?",
+  "faq_1_content": "Drinks points are the in-game currency you earn for regular water consumption and other tasks. The more you drink, the more points you accumulate, and the closer you get to bonuses!",
 
   "faq_2_title": "What is Waterdrop",
   "faq_2_content": "Waterdrop is your chance to get special bonuses for playing the game. Keep an eye out for updates so you don't miss out on bonuses and rewards! ",
 
   "quests": {
-    "title": "Quests",
-    "description": "Complete quests and increase your balance. Use balance to participate in events and practices.",
+    "title": "Tasks",
+    "description": "Complete tasks and increase your balance. Use balance to participate in events and practices.",
     "action_subscribe": "Subscribe",
     "action_subscribe_check": "Check subscription",
     "action_open_link": "Open the link",
@@ -67,6 +67,11 @@
     "action_notify_friend": "Notify friend",
     "check": "Check"
   },
+
+  "join_channel": "Join our channel",
+  "join_official_group": "Join official group",
+  "invite_friend": "Invite a friend",
+  "notify_friend": "Remind a friend to drink",
 
   "quest_error_not_enough_friends": "You don't have enough friends",
   "quest_error_not_join_channel": "You are not subscribed to the channel",
@@ -82,16 +87,16 @@
   "referral_message": "*About the Habbit Hero referral system:*\n\n1. Register through @habbitherobot and receive 500 tokens.\n2. Share your unique registration link with friends and earn 200 tokens. ",
   "share_referral_link": "Share referral link",
   
-  "notification_24h": "Don't forget to drink water and about H2O points. Stop by and pump your water balance!",
+  "notification_24h": "Don't forget to drink water and about Drinks points. Stop by and pump your water balance!",
   "notification_48h": "Drinking water? Go to Habbit Hero and get points for it!",
-  "notification_7d": "Feeling thirsty? Your body definitely needs water. Come back to Habbit Hero and refill your H2O supply!",
+  "notification_7d": "Feeling thirsty? Your body definitely needs water. Come back to Habbit Hero and refill your Drinks supply!",
 
   "games": "Games",
   "combo": "Combo",
   "bubble": "Bubbles",
   "confirm": "Confirm",
 
-  "comboSuccessDescription": "Increase your rating by {{tokens}} H2O!",
+  "comboSuccessDescription": "Increase your rating by {{tokens}} Drinks!",
   "comboFailTitle": "Oops( not this time",
   "comboFailDescription": "You can try again next day!",
   "activateBonus": "Activate Bonus",

@@ -19,8 +19,8 @@ export type QuestProps = QuestDto & {
   onOpen: () => void;
   onComplete?: () => void;
   tokens: number;
-  actionText?: string,
-  checkText?: string
+  actionText?: string;
+  checkText?: string;
 };
 
 export const Quest = ({
@@ -28,15 +28,13 @@ export const Quest = ({
   completed,
   disabled,
   name,
-  nameEn,
   description,
-  descriptionEn,
-  actionText = 'quests.action_subscribe',
-  checkText = 'quests.action_subscribe_check',
+  actionText = "quests.action_subscribe",
+  checkText = "quests.action_subscribe_check",
   onOpen,
   onComplete,
 }: QuestProps) => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const haptic = useHapticFeedback();
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -48,7 +46,7 @@ export const Quest = ({
   const handleDrawerClose = useCallback(() => {
     haptic.impactOccurred("light");
     setDrawerOpen(false);
-  }, [haptic, drawerOpen]);
+  }, [haptic]);
 
   const handleComplete = useCallback(async () => {
     if (onComplete) {
@@ -65,17 +63,17 @@ export const Quest = ({
     <>
       <Card
         className={cn(
-          "overflow-hidden border-none flex p-2.5 items-center flex-row active:scale-95 shadow-none hover:shadow-xl transition-all cursor-pointer",
           completed &&
             "opacity-50 pointer-events-none border-2 border-primary shadow-none",
-          disabled && "opacity-50 pointer-events-none"
+          disabled && "opacity-50 pointer-events-none",
+          'bg-black/20 px-3 pt-1.5 pb-1'
         )}
         onClick={handleDrawerOpen}
       >
-        <div className="flex-1">{i18n.language === 'en' ? nameEn : name}</div>
+        <div className="flex-1">{t(name)}</div>
 
         {!completed && (
-          <span className="text-muted-foreground">
+          <span className="text-white/50">
             <Coins value={tokens} />
           </span>
         )}
@@ -83,16 +81,19 @@ export const Quest = ({
       </Card>
       <Drawer open={drawerOpen} onClose={handleDrawerClose}>
         <DrawerContent>
-          <DrawerClose onClick={handleDrawerClose} className="rounded-full bg-secondary w-7 h-7 flex items-center justify-center absolute top-4 right-4">
+          <DrawerClose
+            onClick={handleDrawerClose}
+            className="rounded-full bg-white/10 w-7 h-7 flex items-center justify-center absolute top-4 right-4"
+          >
             <XIcon className="w-4 h-4" />
           </DrawerClose>
           <DrawerHeader className="flex flex-col items-center">
             <img src="/assets/goggles.webp" width={150} alt="" />
-            <DrawerTitle>{i18n.language === 'en' ? nameEn : name}</DrawerTitle>
-            <p className="text-sm">{i18n.language === 'en' ? descriptionEn : description}</p>
+            <DrawerTitle>{t(name)}</DrawerTitle>
+            <p className="text-sm">{t(description)}</p>
             <Coins value={tokens} />
           </DrawerHeader>
-          <div className="flex flex-col gap-2 p-4 pt-0">
+          <div className="flex flex-col gap-4 p-4 pt-0">
             <Button className="" onClick={onOpen}>
               {t(actionText)}
             </Button>

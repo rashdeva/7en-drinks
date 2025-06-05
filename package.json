@@ -4,5 +4,11 @@
   "version": "0.1.0",
   "scripts": {
     "prepare": "cd frontend && husky"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "motion": "^12.16.0",
+    "simplex-noise": "^4.0.3",
+    "tailwind-merge": "^3.3.0"
   }
 }

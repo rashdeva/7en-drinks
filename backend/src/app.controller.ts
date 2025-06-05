@@ -67,30 +67,27 @@ export class AppController {
     const currentDate = new Date();
     const lastDrinkTime = user.last_drink_time;
 
+    // Get drinks from the past hour
+    const oneHourAgo = new Date(currentDate.getTime() - 60 * 60 * 1000);
+    const drinksInLastHour = user.drinks.filter(
+      (drinkTime) => new Date(drinkTime) > oneHourAgo,
+    );
+
+    console.log(drinksInLastHour);
+
+    // Check if user has already had 7 drinks in the past hour
+    if (drinksInLastHour.length >= MAX_DRINKS) {
+      throw new BadRequestException('drink_hourly_limit');
+    }
+
     // Check if a new day has started
     const isNewDay =
       !lastDrinkTime ||
       lastDrinkTime?.toDateString() !== currentDate?.toDateString();
 
-    // Reset drink count if it's a new day
+    // Reset daily drink count if it's a new day
     if (isNewDay) {
       user.drink_count = 0;
-    } else {
-      // Ensure user has not drunk more than MAX_DRINKS times today
-      if (user.drink_count >= MAX_DRINKS) {
-        throw new BadRequestException('drink_daily_limit');
-      }
-
-      // Check delay conditions based on drink count
-      if (lastDrinkTime) {
-        const timeSinceLastDrink =
-          Math.abs(currentDate.getTime() - lastDrinkTime.getTime()) / 36e5;
-
-        // For the 3rd and 4th drinks, ensure at least 2 hours have passed
-        if (user.drink_count >= 2 && timeSinceLastDrink < 2) {
-          throw new BadRequestException('drink_hour_limit');
-        }
-      }
     }
 
     // Add the current drink to the drinks array
@@ -102,8 +99,8 @@ export class AppController {
     user.last_drink_time = currentDate;
     user.balance += 1;
 
-    // Add +100 if 4 drinks are completed in a day
-    if (user.drink_count === MAX_DRINKS) {
+    // Add bonus points if all 7 drinks are completed in an hour
+    if (drinksInLastHour.length + 1 === MAX_DRINKS) {
       user.balance += 7;
     }
 

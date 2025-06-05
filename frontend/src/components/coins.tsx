@@ -18,7 +18,7 @@ export const Coins = ({
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1 text-primary font-semibold",
+        "inline-flex items-center gap-1 text-white font-semibold",
         className
       )}
     >
