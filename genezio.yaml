@@ -11,13 +11,13 @@ nestjs:
   packageManager: npm
   scripts:
     deploy:
-      - npm install
+      - npm ci
+      - npm run build
+      - npm run prepare-deploy
     build:
-      - pnpm install
-      - pnpm run build
+      - npm run build
     start:
-      - pnpm install
-      - pnpm run start:prod
+      - node dist/main.js
   environment:
     MONGODB_URL: ${{ my-mongo-db.url }}
 
