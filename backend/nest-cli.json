@@ -5,7 +5,8 @@
   "compilerOptions": {
     "deleteOutDir": true,
     "assets": [
-      { "include": "../shared/locales/**/*", "watchAssets": true }
+      { "include": "../shared/locales/**/*", "watchAssets": true },
+      { "include": "src/locales/**/*", "outDir": "dist/locales", "watchAssets": true }
     ]
   }
 }

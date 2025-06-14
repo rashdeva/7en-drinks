@@ -135,6 +135,9 @@ export class User extends Document {
   @Prop({ type: Date, default: Date.now })
   lastVisit: Date;
 
+  @Prop({ type: Date, required: false })
+  lastCheckIn: Date;
+
   createdAt: Date;
   updatedAt: Date;
 }

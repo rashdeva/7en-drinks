@@ -1,6 +1,6 @@
 import { config } from "~/config";
 import { QuestFormData } from "~/pages/admin/quests/components/zod";
-import { UserRank } from "./models";
+import { PaymentModel, PaymentStatus, UserRank } from "./models";
 
 export const drinkWaterCup = async () => {
   const accessToken = localStorage.getItem("accessToken");
@@ -310,4 +310,82 @@ export const fetchMyRank = async (): Promise<number> => {
     console.error("Error in completeQuest:", error);
     throw error;
   }
+};
+
+// Payment status API
+export const getPaymentStatus = async (
+  orderId: string
+): Promise<PaymentStatus> => {
+  const accessToken = localStorage.getItem("accessToken");
+
+  try {
+    const response = await fetch(
+      `${config.apiUrl}/api/payments/status?orderId=${orderId}`,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${accessToken}`,
+        },
+      }
+    );
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return await response.json();
+  } catch (error) {
+    console.error("Error fetching payment status", error);
+    throw error;
+  }
+};
+
+// Notify backend that TON payment has been initiated
+export const notifyTonPaymentInitiated = async (
+  orderId: string
+): Promise<{ success: boolean }> => {
+  const accessToken = localStorage.getItem("accessToken");
+
+  try {
+    const response = await fetch(
+      `${config.apiUrl}/api/payments/ton/initiated`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${accessToken}`,
+        },
+        body: JSON.stringify({ orderId }),
+      }
+    );
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return await response.json();
+  } catch (error) {
+    console.error("Error notifying TON payment initiation", error);
+    throw error;
+  }
+};
+
+export const checkInTonPayment = async (data: {
+  userAddress: string;
+}): Promise<PaymentModel> => {
+  const accessToken = localStorage.getItem("accessToken");
+
+  const response = await fetch(`${config.apiUrl}/api/payments/check-in`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${accessToken}`,
+    },
+    body: JSON.stringify({
+      ...data,
+    }),
+  });
+
+  if (!response.ok) {
+    const errorData = await response.json().catch(() => ({}));
+    throw new Error(errorData.message || "Failed to init payment");
+  }
+
+  return await response.json();
 };

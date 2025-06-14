@@ -159,7 +159,7 @@ export const QuestForm: React.FC<AddQuestFormProps> = ({
               <FormLabel>Количество {t("points")}</FormLabel>
               <FormControl>
                 <Input
-                  placeholder={`Например 1000 ${t("points")}`}
+                  placeholder={`Например 7 ${t("points")}`}
                   type="number"
                   {...field}
                 />

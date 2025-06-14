@@ -1,15 +1,15 @@
 {
-  "onboarding_title": "Welcome to 7EN Drinks!",
+  "onboarding_title": "Welcome to 7EN DRINKS!",
   "onboarding_content": "Want to feel your best every day? Stay healthy by drinking enough water! We’re here to help you track your water and keep you motivated to stay hydrated. You’ve got this!",
   "onboarding_action": "Let's go!",
   "profile": "Profile",
   "earn_more": "Earn More",
   "main": "Main",
 
-  "welcome_title": "Welcome to the 7EN Drinks!",
+  "welcome_title": "Welcome to the 7EN DRINKS!",
   "earn_more_title": "Tap the bubbles to get more Drinks points",
 
-  "invite_friend_text": "{{name}} invites you to Habbit Hero! Get +1000 H20 for joining by link:",
+  "invite_friend_text": "{{name}} invites you to 7EN DRINKS! Get +7 Drinks for joining by link:",
   "notify_friend_text": "{{name}} reminds you to drink a glass of water. You can check in here:",
   "quest_completed": "Task is completed!",
 
@@ -83,13 +83,13 @@
   "start_button_text": "Open the app",
   "referral_button_text": "How to earn with referrals",
   "subscribe_channel": "Subscribe to the channel",
-  "welcome_message": "*Habbit Hero will fight your thirst!*\nThe bot reminds you to drink water on time, monitors your progress, and energizes you!",
-  "referral_message": "*About the Habbit Hero referral system:*\n\n1. Register through @habbitherobot and receive 500 tokens.\n2. Share your unique registration link with friends and earn 200 tokens. ",
+  "welcome_message": "*7EN DRINKS will fight your thirst!*\nThe bot reminds you to drink water on time, monitors your progress, and energizes you!",
+  "referral_message": "*About the 7EN DRINKS referral system:*\n\n1. Register through @se7en_drinks_bot and receive 500 tokens.\n2. Share your unique registration link with friends and earn 200 tokens. ",
   "share_referral_link": "Share referral link",
   
   "notification_24h": "Don't forget to drink water and about Drinks points. Stop by and pump your water balance!",
-  "notification_48h": "Drinking water? Go to Habbit Hero and get points for it!",
-  "notification_7d": "Feeling thirsty? Your body definitely needs water. Come back to Habbit Hero and refill your Drinks supply!",
+  "notification_48h": "Drinking water? Go to 7EN DRINKS and get points for it!",
+  "notification_7d": "Feeling thirsty? Your body definitely needs water. Come back to 7EN DRINKS and refill your Drinks supply!",
 
   "games": "Games",
   "combo": "Combo",
@@ -105,5 +105,13 @@
 
   "leaderboard": "Top",
   "top25": "Top 25",
-  "me": "Me"
+  "me": "Me",
+
+  "check_in": "Daily Check-in",
+  "checking": "Checking...",
+  "daily_payment_success": "Daily reward claimed!",
+  "daily_payment_success_description": "You received 777 Drinks points",
+  "daily_payment_rejected": "Failed to claim daily reward",
+  "daily_payment_processing": "Processing your daily reward",
+  "daily_payment_idle": "Waiting for payment confirmation"
 }

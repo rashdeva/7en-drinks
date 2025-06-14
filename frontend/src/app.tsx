@@ -76,7 +76,7 @@ function App() {
             <Route path="bubble" element={<BubblePage />} />
           </Route>
           <Route path="/faq" element={<FaqPage />} />
-          <Route path="/admin/tasks" element={<AdminQuestsPage />} />
+          <Route path="/admin" element={<AdminQuestsPage />} />
           <Route path="/admin/tasks/add" element={<AdminAddQuestPage />} />
           <Route
             path="/admin/tasks/:questId"

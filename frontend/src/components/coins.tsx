@@ -1,4 +1,3 @@
-import { useTranslation } from "react-i18next";
 import { cn } from "~/lib/utils";
 
 export const Coins = ({
@@ -10,8 +9,6 @@ export const Coins = ({
   className?: string;
   disablePlus?: boolean;
 }) => {
-  const { t } = useTranslation();
-
   // Format value with commas for thousands separator
   const formattedValue = value.toLocaleString();
 
@@ -23,7 +20,7 @@ export const Coins = ({
       )}
     >
       {!disablePlus && "+"}
-      {formattedValue} {t("points")}
+      {formattedValue} <span className="text-xl">🥤</span>
     </span>
   );
 };

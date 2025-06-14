@@ -1,13 +1,10 @@
-import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
 import { Card, CardContent } from "~/components/ui/card";
-import { todayCombination } from "~/db/api";
 import { useQuestStore } from "~/db/questStore";
 import { useUserStore } from "~/db/userStore";
-import { ComboItem } from "~/pages/earn/combo/ui/item";
 
 export function AdminQuestsPage() {
   const quests = useQuestStore((state) => state.quests);
@@ -15,10 +12,10 @@ export function AdminQuestsPage() {
   const user = useUserStore((state) => state.user);
   const navigate = useNavigate();
 
-  const { data: todayCombo } = useQuery({
-    queryKey: ["admin", "combo"],
-    queryFn: todayCombination,
-  });
+  // const { data: todayCombo } = useQuery({
+  //   queryKey: ["admin", "combo"],
+  //   queryFn: todayCombination,
+  // });
 
   if (!user || user.role !== "admin") {
     navigate("/");
@@ -26,15 +23,6 @@ export function AdminQuestsPage() {
 
   return (
     <div className="space-y-8">
-      <section className="space-y-4">
-        <h1 className="text-3xl">Today's Combo</h1>
-        <div className="grid grid-cols-3 gap-4">
-          {todayCombo?.combination.map((value, index) => (
-            <ComboItem key={index} value={value} />
-          ))}
-        </div>
-      </section>
-
       <section className="space-y-4">
         <header className="flex justify-between items-center">
           <h1 className="text-3xl">Admin: Tasks</h1>

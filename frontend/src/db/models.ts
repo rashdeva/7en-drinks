@@ -34,6 +34,7 @@ export type UserModel = User & {
   quests: Array<number>;
   referrals: Array<any>;
 
+  lastCheckIn?: Date | undefined;
   lastDrinkTime?: Date | undefined;
   questsCompletedTimestamps?: Record<string, number>;
   passedCombos: PassedCombo[];
@@ -60,3 +61,27 @@ export type ParticipantModel = {
   userId: number;
   eventId: number;
 };
+
+
+export enum PaymentStatus {
+  NEW = 'NEW',
+  AUTHORIZED = 'AUTHORIZED',
+  CONFIRMED = 'CONFIRMED',
+  CANCELED = 'CANCELED',
+  REJECTED = 'REJECTED',
+  REFUNDED = 'REFUNDED',
+  PARTIAL_REFUNDED = 'PARTIAL_REFUNDED',
+  PENDING = 'PENDING',
+}
+
+export interface PaymentModel {
+  _id: string;
+  orderId: string;
+  amount: number;
+  status: PaymentStatus;
+  user: string;
+  masterAddress: string;
+  userAddress: string;
+  createdAt: string;
+  updatedAt: string;
+}

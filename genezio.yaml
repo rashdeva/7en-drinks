@@ -11,8 +11,9 @@ nestjs:
   packageManager: npm
   scripts:
     deploy:
-      - npm install
+      - npm ci
     build:
+      - pnpm install
       - pnpm run build
     start:
       - pnpm install

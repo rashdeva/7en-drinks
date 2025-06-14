@@ -67,7 +67,7 @@ export class AppController {
     const currentDate = new Date();
     const lastDrinkTime = user.last_drink_time;
 
-    // Get drinks from the past hour
+    // get Drinks from the past hour
     const oneHourAgo = new Date(currentDate.getTime() - 60 * 60 * 1000);
     const drinksInLastHour = user.drinks.filter(
       (drinkTime) => new Date(drinkTime) > oneHourAgo,

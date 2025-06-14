@@ -73,6 +73,7 @@
     "react-router-dom": "^6.23.0",
     "react-window": "^1.8.10",
     "simplex-noise": "^4.0.3",
+    "socket.io-client": "^4.8.1",
     "tailwind-merge": "^2.1.0",
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^0.9.1",

@@ -1,0 +1,12 @@
+{
+  "start_drink_water": "Refresh with water!",
+  "start_button_text": "Drink",
+  "referral_button_text": "Earn with friends",
+  "subscribe_channel": "Join the channel",
+  "welcome_message": "*Time to drink – 7EN DRINKS!*\n\nThis bot will remind you to drink water on time, track your progress, and keep you motivated on your healthy journey!",
+  "referral_message": "Join the 7EN DRINKS referral program:\n\n1. Register via goodfeel_devbot and get 500 tokens as a gift\n2. Share your unique link with friends — everything is more fun together!",
+  "share_referral_link": "Share your link",
+  "notification_24h": "Time to refresh! Don’t forget to drink water and collect drinks — keep your water balance up with us!",
+  "notification_48h": "Water is close! Check in at 7EN DRINKS and get Drinks for every sip!",
+  "notification_7d": "Missing your energy? Your body craves water! Come back to 7EN DRINKS and refill your freshness!"
+}
