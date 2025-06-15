@@ -68,8 +68,8 @@
     "check": "Check"
   },
 
-  "join_channel": "Join our channel",
-  "join_official_group": "Join official group",
+  "join_official_channel": "Join our channel",
+  "join_official_group": "Join our group",
   "invite_friend": "Invite a friend",
   "notify_friend": "Remind a friend to drink",
 
