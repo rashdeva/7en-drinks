@@ -180,16 +180,17 @@ export const DrinkPage = () => {
 
   return (
     <>
+      {user.role === "admin" && (
+        <Button asChild>
+          <Link to="/admin">Админка</Link>
+        </Button>
+      )}
+
       <Card
         ref={cardRef}
         className="pt-5 z-20 bg-transparent text-white pb-2 flex-1 flex flex-col justify-center items-center relative overflow-hidden"
       >
         <div className="space-y-6 relative flex flex-col items-center z-10">
-          {user.role === "admin" && (
-            <Button asChild>
-              <Link to="/admin">Админка</Link>
-            </Button>
-          )}
           <header className="text-center">
             <h2 className="text-2xl font-bold">
               {user.drinkCount === MAX_COUNT
@@ -276,18 +277,16 @@ export const DrinkPage = () => {
           )}
         </footer>
       </Card>
-      {userAddress && (
-        <Card className="relative z-20">
-          <Button
-            type="submit"
-            className="w-full"
-            disabled={!canClaimDailyPayment}
-            onClick={handleCheckIn}
-          >
-            {t("check_in")}
-          </Button>
-        </Card>
-      )}
+      <Card className="relative z-20">
+        <Button
+          type="submit"
+          className="w-full"
+          disabled={!canClaimDailyPayment}
+          onClick={handleCheckIn}
+        >
+          {t("check_in")}
+        </Button>
+      </Card>
       <Card className="space-y-3 bg-blue-600/20 backdrop-blur-lg mt-6 z-20 p-3 w-full overflow-hidden flex flex-col justify-start">
         <h2 className="text-base font-bold">{t("referral_link")}</h2>
         <InviteFriend />

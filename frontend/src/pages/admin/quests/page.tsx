@@ -5,8 +5,10 @@ import { Button } from "~/components/ui/button";
 import { Card, CardContent } from "~/components/ui/card";
 import { useQuestStore } from "~/db/questStore";
 import { useUserStore } from "~/db/userStore";
+import { useBack } from "~/hooks/useBack";
 
 export function AdminQuestsPage() {
+  useBack("/");
   const quests = useQuestStore((state) => state.quests);
   const { t } = useTranslation();
   const user = useUserStore((state) => state.user);
