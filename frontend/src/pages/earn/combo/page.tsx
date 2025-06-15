@@ -127,7 +127,6 @@ export const ComboPage: React.FC = () => {
             <XIcon className="w-4 h-4" />
           </DrawerClose>
           <DrawerHeader className="flex flex-col items-center">
-            <img src="/assets/goggles.webp" width={150} alt="" />
             <DrawerTitle>
               <Coins value={tokens} className="text-foreground" />
             </DrawerTitle>
@@ -152,7 +151,6 @@ export const ComboPage: React.FC = () => {
             <XIcon className="w-4 h-4" />
           </DrawerClose>
           <DrawerHeader className="flex flex-col items-center">
-            <img src="/assets/goggles.webp" width={150} alt="" />
             <DrawerTitle>{t("comboFailTitle")}</DrawerTitle>
             <p className="text-sm">{t("comboFailDescription")}</p>
           </DrawerHeader>

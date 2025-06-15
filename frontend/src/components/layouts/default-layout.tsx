@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { useUserStore } from "~/db/userStore";
 import { cn } from "~/lib/utils";
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+import { Avatar, AvatarImage } from "../ui/avatar";
 import { Coins } from "../coins";
 import { TonConnectButton } from "@tonconnect/ui-react";
 
@@ -27,9 +27,6 @@ export const DefaultLayout = ({ children }: { children: ReactNode }) => {
             <TonConnectButton />
             <Avatar className="w-[36px] h-[36px]">
               <AvatarImage src={`https://unavatar.io/telegram/${username}`} />
-              <AvatarFallback>
-                <img src="/assets/goggles.webp" alt="" />
-              </AvatarFallback>
             </Avatar>
           </div>
         </header>

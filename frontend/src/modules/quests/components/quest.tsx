@@ -88,7 +88,6 @@ export const Quest = ({
             <XIcon className="w-4 h-4" />
           </DrawerClose>
           <DrawerHeader className="flex flex-col items-center">
-            <img src="/assets/goggles.webp" width={150} alt="" />
             <DrawerTitle>{t(name)}</DrawerTitle>
             <p className="text-sm">{t(description)}</p>
             <Coins value={tokens} />

@@ -22,7 +22,6 @@ export const ProfilePage = () => {
         <Avatar className="w-[60px] h-[60px]">
           <AvatarImage src={`https://unavatar.io/telegram/${user.username}`} />
           <AvatarFallback>
-            <img src="/assets/goggles.webp" alt="" />
           </AvatarFallback>
         </Avatar>
         <h1 className="text-4xl -space-y-2 overflow-hidden pt-1 font-secimbold">
@@ -82,11 +81,7 @@ export const ProfilePage = () => {
       <section className="space-y-1">
         <h2 className="text-3xl font-bold">{t("airdrop_soon")}</h2>
         <div className="flex justify-center">
-          <img
-            src="/assets/flippers.webp"
-            className="h-[287px] -mb-16 -mt-[90px]"
-            alt=""
-          />
+          
         </div>
         <Link
           to={"/faq"}
