@@ -7,9 +7,9 @@ import { ConfigModule } from './config.module';
 import { AuthModule } from './auth/auth.module';
 import { NotificationModule } from './notifications/notification.module';
 import { QuestModule } from './quests/quest.module';
-import { ComboModule } from './combo/combo.module';
-import { LeaderboardModule } from './leaderboard/leaderboard.module';
-import { PaymentsModule } from './payments/payments.module';
+// import { ComboModule } from './combo/combo.module';
+// import { LeaderboardModule } from './leaderboard/leaderboard.module';
+// import { PaymentsModule } from './payments/payments.module';
 
 @Module({
   imports: [
@@ -19,9 +19,9 @@ import { PaymentsModule } from './payments/payments.module';
     AuthModule,
     NotificationModule,
     QuestModule,
-    ComboModule,
-    LeaderboardModule,
-    PaymentsModule,
+    // ComboModule,
+    // LeaderboardModule,
+    // PaymentsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
