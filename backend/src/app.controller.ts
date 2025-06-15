@@ -10,12 +10,6 @@ import {
 import { JwtAuthGuard } from './auth/auth.guard';
 import { CurrentUser } from './auth/decorators/current-user.decorator';
 import { User } from './users/entities/user.entity';
-import {
-  CheckProofPayload,
-  CheckTonProof,
-  GenerateTonProofPayload,
-} from './auth/dto/tonproof';
-import { checkProof, generatePayload } from './auth/guards/ton-proof';
 import { Telegraf } from 'telegraf';
 import { NotificationService } from './notifications/notification.service';
 import { BubbleGameTokenGuard } from './auth/guards/bubble.guard';
@@ -46,18 +40,6 @@ export class AppController {
   @Get('events')
   async getEvents() {
     return [];
-  }
-
-  @Post('generate-payload')
-  generatePayload(): GenerateTonProofPayload {
-    return generatePayload();
-  }
-
-  @Post('check-proof')
-  async checkProof(
-    @Body() checkProofPayload: CheckProofPayload,
-  ): Promise<CheckTonProof> {
-    return await checkProof(checkProofPayload);
   }
 
   @Post('drink/cup')
