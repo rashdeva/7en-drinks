@@ -7,7 +7,6 @@ import {
   Post,
   UseGuards,
 } from '@nestjs/common';
-import { UsersService } from './users/users.service';
 import { JwtAuthGuard } from './auth/auth.guard';
 import { CurrentUser } from './auth/decorators/current-user.decorator';
 import { User } from './users/entities/user.entity';
@@ -30,7 +29,6 @@ export class AppController {
   private bot: Telegraf;
 
   constructor(
-    private readonly usersService: UsersService,
     private readonly authService: AuthService,
     private readonly notificationService: NotificationService,
   ) {
@@ -72,8 +70,6 @@ export class AppController {
     const drinksInLastHour = user.drinks.filter(
       (drinkTime) => new Date(drinkTime) > oneHourAgo,
     );
-
-    console.log(drinksInLastHour);
 
     // Check if user has already had 7 drinks in the past hour
     if (drinksInLastHour.length >= MAX_DRINKS) {

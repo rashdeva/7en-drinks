@@ -9,15 +9,16 @@ services:
 nestjs:
   path: backend
   packageManager: npm
+  timeout: 10
   scripts:
     deploy:
       - npm ci
-      - npm run build
-      - npm run prepare-deploy
     build:
-      - npm run build
+      - pnpm install
+      - pnpm run build
     start:
-      - node dist/main.js
+      - pnpm install
+      - pnpm run start:prod
   environment:
     MONGODB_URL: ${{ my-mongo-db.url }}
 
@@ -26,12 +27,11 @@ frontend:
   publish: dist
   scripts:
     deploy:
-      - pnpm install
+      - npm install
     build:
-      - pnpm run build
+      - npm run build
     start:
-      - pnpm install
-      - pnpm run dev
+      - npm run dev
   environment:
     VITE_API_URL: ${{ nestjs.url }}
   subdomain: amaranth-available-blackbird

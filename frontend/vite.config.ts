@@ -61,4 +61,25 @@ export default defineConfig({
       '~locales': path.resolve(__dirname, '../shared/locales'),
     },
   },
+  build: {
+    target: 'esnext',
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          telegram: ['@telegram-apps/sdk', '@telegram-apps/sdk-react'],
+          ui: ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu'],
+          ton: ['@ton/core', '@ton/ton', '@tonconnect/ui-react'],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1000,
+  },
 });

@@ -1,16 +1,5 @@
 ---
 services:
-  watertap-db:
-    container_name: ${SERVICE_NAME}-${BRANCH_NAME}-db
-    image: mongo:4.4
-    restart: unless-stopped
-    ports:
-      - 27717:27017
-    volumes:
-      - ${DATABASE_PATH}:/data/db
-    networks:
-      - app-net
-
   watertap-backend:
     image: ${IMAGE_NAME}-backend:${BRANCH_NAME}
     container_name: ${SERVICE_NAME}-${BRANCH_NAME}-backend
@@ -19,7 +8,7 @@ services:
       JWT_ALGORITHM: "${JWT_ALGORITHM}"
       JWT_EXPIRES_IN: "${JWT_EXPIRES_IN}"
       JWT_SECRET: "${JWT_SECRET}"
-      MONGODB_URL: "mongodb://${SERVICE_NAME}-${BRANCH_NAME}-db:27017/watertap"
+      MONGODB_URL: "mongodb+srv://emXjupbD:nlLXRCzb9GDKXXdU@us-east-1.ufsuw.mongodb.net/my-mongo-db-5qUf"
       BOT_TOKEN: "${BOT_TOKEN}"
       BOT_NAME: "${BOT_NAME}"
       NODE_ENV: "${NODE_ENV}"
@@ -31,11 +20,8 @@ services:
       - traefik.http.routers.${SERVICE_NAME}-${BRANCH_NAME}-backend.tls=true
       - traefik.http.routers.${SERVICE_NAME}-${BRANCH_NAME}-backend.tls.certresolver=letsencrypt
       - traefik.http.services.${SERVICE_NAME}-${BRANCH_NAME}-backend.loadbalancer.server.port=3002
-    depends_on:
-      - watertap-db
     networks:
       - traefik
-      - app-net
 
   watertap-frontend:
     image: ${IMAGE_NAME}-frontend:${BRANCH_NAME}
@@ -48,14 +34,9 @@ services:
       - traefik.http.routers.${SERVICE_NAME}-${BRANCH_NAME}-frontend.tls=true
       - traefik.http.routers.${SERVICE_NAME}-${BRANCH_NAME}-frontend.tls.certresolver=letsencrypt
       - traefik.http.services.${SERVICE_NAME}-${BRANCH_NAME}-frontend.loadbalancer.server.port=4173
-    depends_on:
-      - watertap-backend
     networks:
       - traefik
 
 networks:
   traefik:
     external: true
-  app-net:
-    name: ${SERVICE_NAME}-${BRANCH_NAME}-net
-    driver: bridge
