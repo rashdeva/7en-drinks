@@ -9,7 +9,7 @@ import { NotificationModule } from './notifications/notification.module';
 import { QuestModule } from './quests/quest.module';
 import { ComboModule } from './combo/combo.module';
 import { LeaderboardModule } from './leaderboard/leaderboard.module';
-// import { PaymentsModule } from './payments/payments.module';
+import { PaymentsModule } from './payments/payments.module';
 
 @Module({
   imports: [
@@ -21,7 +21,7 @@ import { LeaderboardModule } from './leaderboard/leaderboard.module';
     QuestModule,
     ComboModule,
     LeaderboardModule,
-    // PaymentsModule,
+    PaymentsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

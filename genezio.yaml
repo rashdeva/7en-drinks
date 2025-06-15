@@ -8,17 +8,16 @@ services:
 
 nestjs:
   path: backend
-  packageManager: npm
-  timeout: 10
+  packageManager: pnpm # Use pnpm consistently
+  timeout: 30 # Add this line
   scripts:
     deploy:
       - npm ci
     build:
-      - pnpm install
+      - pnpm install --frozen-lockfile
       - pnpm run build
     start:
-      - pnpm install
-      - pnpm run start:prod
+      - pnpm run start:prod # Remove pnpm install from start!
   environment:
     MONGODB_URL: ${{ my-mongo-db.url }}
 
