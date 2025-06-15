@@ -6,7 +6,7 @@ import { QueryProvider } from "./providers/query-provider.tsx";
 
 import "./globals.css";
 import { I18nextProvider } from "react-i18next";
-import i18n from "./i18n.ts";
+import i18n from "./lib/i18n.ts";
 import { ThemeProvider } from "./providers/shadcn-provider.tsx";
 import { TonConnectUIProvider } from "@tonconnect/ui-react";
 import { config } from "./config.ts";

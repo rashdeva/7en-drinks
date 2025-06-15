@@ -22,7 +22,7 @@ i18n
     debug: import.meta.env.DEV,
 
     backend: {
-      loadPath: "/locales/{{lng}}/{{ns}}.json",
+      loadPath: "/assets/locales/{{lng}}/{{ns}}.json",
     },
 
     ns: ["translation"],
